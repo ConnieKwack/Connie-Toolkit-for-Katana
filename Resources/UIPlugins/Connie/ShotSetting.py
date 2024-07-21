@@ -75,8 +75,7 @@ class ShotSetting(QWidget):
         self.setWindowIcon(QtGui.QIcon("D:/Katana/Inhouse/Icons/QIcon.png"))
         self.resize(370, 300)
 
-        # show
-        self.show()
+
 
 
     def AddVariableSwitchPattern(self,shot):
