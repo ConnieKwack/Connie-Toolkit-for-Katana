@@ -77,8 +77,7 @@ class ImportLight(QWidget):
         self.setWindowIcon(QIcon("D:/Katana/Inhouse/Icons/QIcon.png"))
         self.resize(370, 370)
 
-        # show
-        self.show()
+
 
     def get_show_info(self):
         # for get show name
