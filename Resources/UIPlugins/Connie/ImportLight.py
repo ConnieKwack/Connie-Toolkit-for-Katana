@@ -73,7 +73,7 @@ class ImportLight(QWidget):
         self.setLayout(vbox)
 
         # set window
-        self.setWindowTitle("Import Environment")
+        self.setWindowTitle("Import Light")
         self.setWindowIcon(QIcon("D:/Katana/Inhouse/Icons/QIcon.png"))
         self.resize(370, 370)
 
