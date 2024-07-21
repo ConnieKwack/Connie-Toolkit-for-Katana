@@ -3,6 +3,9 @@ from PyQt5.QtWidgets import QAction, QMenu, QMessageBox
 from PyQt5.QtGui import QIcon
 from Katana import NodegraphAPI
 
+
+
+#  menu
 def studio_pipe_menu():
     main_window = UI4.App.Layouts._PrimaryWindow
     main_menu = main_window.findChild(UI4.App.MainMenu.MainMenu)
@@ -24,12 +27,19 @@ def studio_pipe_menu():
 
 
 
+#  global variable to float custom windows
+#  I don't feel the need to float multiple windows, so I made only one global variable.
+g_window = None
+
+
+
+
 #  click event
 def Initial_Setting():
     from Resources.UIPlugins.Connie.InitialSetting import InitialSetting
-    w = InitialSetting()
-    w.show()
-    raise Exception("Initial Setting")
+    global g_window
+    g_window = InitialSetting()
+    g_window.show()
 
 
 def Shot_Setting():
@@ -38,9 +48,9 @@ def Shot_Setting():
         QMessageBox.warning(None, "warning", "Save Katana file first  ")
     else:
         from Resources.UIPlugins.Connie.ShotSetting import ShotSetting
-        w = ShotSetting()
-        w.show()
-        raise Exception("Shot Setting")
+        global g_window
+        g_window = ShotSetting()
+        g_window.show()
 
 
 def Import_Env():
@@ -49,9 +59,9 @@ def Import_Env():
         QMessageBox.warning(None, "warning", "Save Katana file first  ")
     else:
         from Resources.UIPlugins.Connie.ImportEnv import ImportEnv
-        w = ImportEnv()
-        w.show()
-        raise Exception("Import Env")
+        global g_window
+        g_window = ImportEnv()
+        g_window.show()
 
 
 def Import_Light():
@@ -60,7 +70,6 @@ def Import_Light():
         QMessageBox.warning(None, "warning", "Save Katana file first  ")
     else:
         from Resources.UIPlugins.Connie.ImportLight import ImportLight
-        w = ImportLight()
-        w.show()
-        raise Exception("Import Light")
-
+        global g_window
+        g_window = ImportLight()
+        g_window.show()
