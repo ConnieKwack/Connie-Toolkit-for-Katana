@@ -118,8 +118,7 @@ class InitialSetting(QWidget):
         self.setWindowIcon(QtGui.QIcon("D:/Katana/Inhouse/Icons/QIcon.png"))
         self.resize(370, 450)
 
-        # show
-        self.show()
+
 
     # buttons clicked.connect
     def btnImport_pressed(self):
